@@ -50,6 +50,8 @@ trash()
     fi
   done
 }
+
+
 undelfile()
 {
   for file in "$@"; do
@@ -82,6 +84,7 @@ undelfile()
   done
 }
 
+
 cls()
 {
     read -p "clear sure?[y/N] " confirm
@@ -90,6 +93,7 @@ cls()
     confirm=${confirm:-N}
     [ "$confirm" == 'y' ] || [ "$confirm" == 'Y' ]  && /bin/rm -rf "$TRASH_DIR"/* && echo "" > "$LOG_FILE"
 }
+
 
 
 export TRASH_DIR
